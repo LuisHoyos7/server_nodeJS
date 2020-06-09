@@ -1,0 +1,40 @@
+<%- include('layouts/header') %>
+
+<% saveGeneric.forEach(function (save) { %>
+<div class="col-md-4 offset-4">
+    <div class="card">
+        <div class="card-header">
+             <p class="text-center">
+                <%= save.publicado %>
+            </p>
+        </div>
+        <div class="card-body">
+            <h2>
+                <%= save.titulo %>
+            </h2>
+            <p>
+                <%= save.des %>
+            </p>
+        </div>
+    </div>
+</div>
+    
+<% }) %> 
+
+<%if (saveGeneric.length) { %>
+    <div class="col-md-4 offset-4">
+        <a href="/clear-generic" class="btn btn-danger mt-2">Limpiar Registros</a>
+    </div>
+<% } else { %>
+    <div class="col-md-4">
+        <p class="alert alert-primary">
+            No hay elementos para mostrar
+            <a href="/new-generic" class="btn btn-success">
+                añadir
+            </a>
+        </p>
+    </div>
+<% }  %>
+
+<%- include('layouts/footer')  %>
+    

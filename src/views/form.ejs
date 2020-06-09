@@ -1,0 +1,24 @@
+<%- include('layouts/header') %>
+
+<div class="col-md-4 offset-4">
+    <h1 class="text-center p-2">Agrega un Dato</h1>
+
+    <form method="POST">
+        <div class="form-group">
+            <label for="titulo">Titulo</label>
+            <input class="form-control" id="titulo" name="titulo" placeholder="Escribe el titulo" required>
+        </div>
+
+        <div class="form-group">
+            <label for="titulo">Descripcion</label>
+            <textarea class="form-control" id="des" name="des" placeholder="Escribe una descripcion" required></textarea>
+        </div>
+
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit"> Enviar </button>
+        </div>
+    </form>
+</div>
+
+
+<%- include('layouts/footer') %>
